@@ -1,0 +1,43 @@
+/* .videos{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.videoBox{
+    border: 1px solid black; 
+    width: 90%; 
+    margin-bottom: 1rem;
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
+}
+
+.imgCenter{
+    display: flex;
+    justify-content: center;
+} */
+
+body{
+    min-height: 100vh;
+    height: auto;
+    background-image: linear-gradient(to right, #757F9A, #D7DDE8);
+}
+
+.bg-color{
+    background-color: gainsboro;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
