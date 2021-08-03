@@ -5,7 +5,7 @@ async function fetch_playlist_id(api_key){
 
     const pewdiepie = "UCVtFOytbRpEvzLjvqGG5gxQ";
     const shaiekID = "UCwNXRGwoxROY0OaC9uX_7uw";
-    await fetch("https://www.googleapis.com/youtube/v3/channels?id="+pewdiepie+"&key="+api_key+"&part=contentDetails")
+    await fetch("https://www.googleapis.com/youtube/v3/channels?id="+shaiekID+"&key="+api_key+"&part=contentDetails")
     .then((response) => response.json()) //2
     .then((result) => {
         id = result.items[0].contentDetails.relatedPlaylists.uploads
@@ -107,7 +107,9 @@ function createDiv(videos){
                         <h5 class="card-title">${position+1}. ${title}</h5>
                         <p class="card-text">${description}</p>
                     </div>
-                    <a href = "https://www.youtube.com/watch?v=${video_id}" class="btn btn-danger text-white mx-md-3 mx-auto ">Watch on YouTube</a>
+                    <div class="d-flex justify-content-md-start">
+                        <a href = "https://www.youtube.com/watch?v=${video_id}" class="btn btn-danger text-white mx-md-3 mx-auto ">Watch on YouTube</a>
+                    </div>
                 </div>
             </div>
         </div>
