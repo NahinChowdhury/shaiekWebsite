@@ -1,0 +1,11 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.line{
+    margin: 0px auto;
+    width: 75px;
+    height: 5px;
+    background-color: rgb(0 166 81);;
+}

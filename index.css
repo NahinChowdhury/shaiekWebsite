@@ -25,7 +25,7 @@ body{
 }
 
 .right-12{
-    right: 12.8%;
+    right: 12.7%;
 }
 .mr-8{
     margin-right: 8.33333%;
@@ -82,8 +82,20 @@ body{
     background-color: rgb(107 110 112);
 }
 
+.bg-light-yellow{
+    background-color: rgba(221, 201, 24, 0.055);
+}
+
 .text-green{
     color: rgb(0 166 81);
+}
+
+.text-blue{
+    color: rgba(24,142,221,1);
+}
+
+.text-yellow{
+    color: rgba(221, 201, 24, 1);
 }
 
 .italic-500{
@@ -101,12 +113,26 @@ body{
     font-style: italic;
 }
 
-.line{
+.line-green{
     margin: 0px auto;
     width: 75px;
-    height: 10px;
-    background-color: rgb(0 166 81);;
+    background-color: rgb(0 166 81);
 }
+.line-blue{
+    margin: 0px auto;
+    width: 75px;
+    background-color: rgba(24, 142, 221, 1);
+}
+.line-yellow{
+    margin: 0px auto;
+    width: 75px;
+    background-color: rgba(221, 201, 24, 1);
+}
+
+.mh-640{
+    max-height: 640px;
+}
+
 
 .btn a:link {
     text-decoration: none;
@@ -130,4 +156,55 @@ body{
     .mr-8{
         margin-right: 0;
     }
+}
+
+
+/* .img-animation-1{
+    animation-name: img-animation-1;
+    animation-duration: 1s;
+}
+
+.img-animation-2{
+    animation-name: img-animation-2;
+    animation-duration: 1s;
+} */
+
+.text-animation{
+    animation-name: text-up;
+    animation-duration: 1s;
+}
+
+.line-animation{
+    animation-name: line-dash;
+    animation-duration: 3s;
+    transition: ease-in-out;
+
+}
+
+@keyframes text-up {
+    from {margin-top: 200px;}
+    to {margin-top: 0;}
+}
+
+@keyframes text-animation-rotate {
+    0%{transform: rotate(10deg)}
+    25%{transform: rotate(-10deg)}
+    50%{transform: rotate(10deg)}
+    75%{transform: rotate(-10deg)}
+    100%{transform: rotate(0deg)}
+}
+
+@keyframes img-animation-1 {
+    from {margin-left: -200px;}
+    to {margin-left: 0;}
+}
+
+@keyframes img-animation-2 {
+    from {margin-right: -188px;}
+    to {margin-right: 0;}
+}
+
+@keyframes line-dash {
+    0% {margin-left: 0;}
+    100% {margin-left: 50%; transform: translateX(-50%);}
 }
