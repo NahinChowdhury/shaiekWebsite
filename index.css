@@ -159,7 +159,7 @@ body{
 }
 
 
-/* .img-animation-1{
+.img-animation-1{
     animation-name: img-animation-1;
     animation-duration: 1s;
 }
@@ -167,7 +167,7 @@ body{
 .img-animation-2{
     animation-name: img-animation-2;
     animation-duration: 1s;
-} */
+}
 
 .text-animation{
     animation-name: text-up;
