@@ -1,0 +1,30 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.img-size{
+
+    min-width: 125px;
+    min-height: 125px;
+}
+
+.circle {
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.timestamp{
+    margin-left: -30px;
+    margin-top: 45px;
+}
+
+.timestamp-text{
+    margin-left: -90px;
+    margin-top: 50px;
+    font-size: 0.75rem;
+    width: 20ch;
+}

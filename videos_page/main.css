@@ -19,25 +19,28 @@ body{
     min-height: 100vh;
     height: auto;
     background-image: linear-gradient(to right, #757F9A, #D7DDE8);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
 }
 
 .bg-color{
     background-color: gainsboro;
 }
-a:link {
+
+.btn a:link {
     text-decoration: none;
     color: black;
 }
   
-a:visited {
+.btn  a:visited {
     text-decoration: none;
     color: black;
 }
 
-a:hover {
+.btn a:hover {
     text-decoration: underline;
 }
 
-a:active {
+.btn a:active {
     text-decoration: underline;
 }
