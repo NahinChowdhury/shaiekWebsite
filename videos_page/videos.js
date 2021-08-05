@@ -1,3 +1,20 @@
+const line_yellow = document.querySelector('.line-yellow');
+
+const observerLine = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is visible
+      if (entry.isIntersecting) {
+        // Add the animation class
+        entry.target.classList.add('line-animation');
+      }
+    });
+});
+
+observerLine.observe(line_yellow);
+
+
+
 async function fetch_playlist_id(api_key){
 
     let id = 0;
@@ -104,8 +121,8 @@ function createDiv(videos){
                 </div>
                 <div class="col-md-8 mr-2 my-2">
                     <div class="card-body">
-                        <h5 class="card-title">${position+1}. ${title}</h5>
-                        <p class="card-text">${description}</p>
+                        <h5 class="card-title italic-700 font-2">${position+1}. ${title}</h5>
+                        <p class="card-text font-1">${description}</p>
                     </div>
                     <div class="d-flex justify-content-md-start">
                         <a href = "https://www.youtube.com/watch?v=${video_id}" class="btn btn-danger text-white mx-md-3 mx-auto ">Watch on YouTube</a>

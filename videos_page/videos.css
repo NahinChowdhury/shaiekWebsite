@@ -1,0 +1,92 @@
+/* .videos{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.videoBox{
+    border: 1px solid black; 
+    width: 90%; 
+    margin-bottom: 1rem;
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
+}
+
+.imgCenter{
+    display: flex;
+    justify-content: center;
+} */
+
+body{
+    min-height: 100vh;
+    height: auto;
+    /* background-image: linear-gradient(to right, #757F9A, #D7DDE8); */
+    background-color: rgba(221, 201, 24, 0.055);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.bg-color{
+    background-color: gainsboro;
+}
+
+.bg-light-yellow {
+    background-color: rgba(221, 201, 24, 0.055);
+}
+
+
+.line-yellow{
+    margin: 0px auto;
+    width: 75px;
+    background-color: rgba(221, 201, 24, 1);
+}
+
+.text-yellow{
+    color: rgba(221, 201, 24, 1);
+}
+
+.bold-800{
+    font-weight: 800;
+}
+
+.italic-700{
+    font-style: italic;
+    font-weight: 700;
+}
+
+.font-2{
+    font-size: 2rem;;
+}
+
+.font-1{
+    font-size: 1.25rem;
+}
+
+.btn a:link {
+    text-decoration: none;
+    color: black;
+}
+  
+.btn  a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.btn a:hover {
+    text-decoration: underline;
+}
+
+.btn a:active {
+    text-decoration: underline;
+}
+
+
+.line-animation{
+    animation-name: line-dash;
+    animation-duration: 3s;
+    transition: ease-in-out;
+
+}
+
+@keyframes line-dash {
+    0% {margin-left: 0;}
+    100% {margin-left: 50%; transform: translateX(-50%);}
+}
