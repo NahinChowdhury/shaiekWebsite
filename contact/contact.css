@@ -76,6 +76,10 @@ body{
 }
 
 
+.map-hw{
+    height: 300px;
+}
+
 @media screen and (max-width: 992px) {
     .pl-6{
         padding-left: 1rem;
