@@ -35,6 +35,18 @@ body{
     width: 11ch;
 }
 
+.w-10ch{
+    width: 10ch;
+}
+
+.w-8ch{
+    width: 8ch;
+}
+
+.w-15ch{
+    width: 15ch;
+}
+
 .bold-800{
     font-weight: 800;
 }

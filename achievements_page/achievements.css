@@ -49,6 +49,14 @@ body{
     width: 10ch;
 }
 
+.w-8ch{
+    width: 8ch;
+}
+
+.w-15ch{
+    width: 15ch;
+}
+
 .italic-500{
     font-style: italic;
     font-weight: 500;
