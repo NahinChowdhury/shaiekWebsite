@@ -4,7 +4,7 @@ body{
     background-color: #eeeeee;
 }
 
-.line{
+.line-brown{
     margin: 0px auto;
     width: 75px;
     height: 5px;
@@ -176,4 +176,18 @@ body{
     body{
         font-size: 1rem;
     }
+}
+
+
+
+.line-animation{
+    animation-name: line-dash;
+    animation-duration: 3s;
+    transition: ease-in-out;
+
+}
+
+@keyframes line-dash {
+    0% {margin-left: 0;}
+    100% {margin-left: 50%; transform: translateX(-50%);}
 }

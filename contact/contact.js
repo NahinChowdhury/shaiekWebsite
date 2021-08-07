@@ -1,3 +1,19 @@
+const line_brown = document.querySelector('.line-brown');
+
+const observerLine = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is visible
+      if (entry.isIntersecting) {
+        // Add the animation class
+        entry.target.classList.add('line-animation');
+      }
+    });
+});
+
+observerLine.observe(line_brown);
+
+
 async function initMap() {
     const infoWindow = new google.maps.InfoWindow();
 
