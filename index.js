@@ -6,24 +6,49 @@ const line_blue = document.querySelector('.line-blue');
 const line_green = document.querySelector('.line-green');
 const line_yellow = document.querySelector('.line-yellow');
 
-// document.addEventListener('scroll', () => {
-//     if (window.scrollY >= 1200) {
-//         navbar.classList.add("d-none")
-//     }
-//     else {
-//       navbar.classList.remove("d-none")
-//     }
+const blur_icons = document.querySelectorAll('.blur-icon');
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY >= document.querySelector(".heading").offsetHeight) {
+        navbar.classList.add("d-none")
+    }
+    else {
+      navbar.classList.remove("d-none")
+    }
+})
+
+// setHeadingMT();
+
+// window.addEventListener("resize", ()=>{
+//   console.log("resizing")
+//   formatting sidebars and other elements dynamically
+//   setHeadingMT();
+//   setMapMarginTop();
+
 // })
 
-setHeadingMT();
+for(let [i, icon] of blur_icons.entries()){
+  console.log(icon)
+  icon.addEventListener("click", ()=>{
+    const img = icon.parentElement.children[1]
+    const current_icon = document.querySelectorAll('.blur-icon')[i];
+    // console.log(current_icon)
+    img.classList.toggle("blur-mask");
 
-window.addEventListener("resize", ()=>{
-  // console.log("resizing")
-  // formatting sidebars and other elements dynamically
-  setHeadingMT();
-  // setMapMarginTop();
+    console.log(current_icon.children[0].src)
+    if(current_icon.children[0].src.includes("eye-closed.png")){
+      // console.log("in if")
+      const str = current_icon.children[0].src.replace("closed", "open");
+      // console.log(str)
+      current_icon.children[0].src = str;
+    }else{
+      // console.log("in else")
+      current_icon.children[0].src = current_icon.children[0].src.replace("open", "closed");
+    }
 
-})
+  })
+}
+
 
 
 const observerImg1 = new IntersectionObserver(entries => {
@@ -97,5 +122,6 @@ observerLine.observe(line_green);
 observerLine.observe(line_yellow);
 
 function setHeadingMT(){
-  document.querySelector(".heading").style.marginTop = `-${navbar.offsetHeight}px`;
+  document.querySelector(".heading").style.marginTop = `-${document.querySelector("nav").offsetHeight}px`;
+  console.log("Working and navbar: " + document.querySelector("nav").offsetHeight)
 }

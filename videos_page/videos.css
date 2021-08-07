@@ -79,6 +79,15 @@ body{
 }
 
 
+.mobile-logo{
+    filter: brightness(0%) invert(1);
+}
+
+.font-1{
+    font-size: 1rem;
+}
+
+
 .line-animation{
     animation-name: line-dash;
     animation-duration: 3s;

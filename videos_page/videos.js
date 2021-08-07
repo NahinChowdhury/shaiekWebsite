@@ -116,7 +116,7 @@ function createDiv(videos){
         div.innerHTML = `
         <div class="card mb-5 mx-auto shadow bg-color" style="max-width: 80%;">
             <div class="row g-0">
-                <div class="col-md-4 d-flex align-items-center justify-content-sm-center mt-md-0 mt-5">
+                <div class="col-md-4 d-flex align-items-center justify-content-sm-center mt-md-0">
                     <img src="${thumbnail}" alt="..." class="img-fluid img-thumbnail">
                 </div>
                 <div class="col-md-8 mr-2 my-2">

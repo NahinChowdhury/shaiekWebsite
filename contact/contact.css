@@ -1,22 +1,24 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.15rem;
+    background-color: #eeeeee;
 }
 
 .line{
     margin: 0px auto;
     width: 75px;
     height: 5px;
-    background-color: rgb(0 166 81);;
+    background-color: rgb(166 61 0);
 }
 
 .text-brown{
-    color: brown;
+    color: rgb(166 61 0);
 }
 
 .font-bubble{
     font-family: 'Bubblegum Sans', sans-serif;
 }
+
 .font-2-5{
     font-size: 2.5rem;
 }
@@ -35,6 +37,10 @@ body{
 
 .bold-800{
     font-weight: 800;
+}
+
+.bold-700{
+    font-weight: 700;
 }
 
 .italic-600{
@@ -79,6 +85,74 @@ body{
 .map-hw{
     height: 300px;
 }
+
+
+
+.youtube-logo a:active, .facebook-logo a:active, .popular-link a:active {
+    text-decoration: none;
+}
+
+.youtube-logo a:link {
+    text-decoration: none;
+    color: #ff3d00;
+}
+  
+.youtube-logo a:visited {
+    text-decoration: none;
+    color: #ff3d00;
+}
+
+.youtube-logo a:hover {
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+.facebook-logo a:link {
+    text-decoration: none;
+    color: #4b68a1;
+}
+  
+.facebook-logo a:visited {
+    text-decoration: none;
+    color: #4b68a1;
+}
+
+.facebook-logo a:hover {
+    text-decoration: none;
+    color: #344870;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.facebook-logo a:active {
+    text-decoration: none;
+}
+
+
+
+.popular-link a:link, .popular-link a:visited {
+    text-decoration: none;
+    color: gray;
+}
+  
+.popular-link a:hover{
+    text-decoration: none;
+    color: black;  
+}
+
+
+.mobile-logo{
+    filter: brightness(0%) invert(1);
+}
+
+.font-1{
+    font-size: 1rem;
+}
+
 
 @media screen and (max-width: 992px) {
     .pl-6{

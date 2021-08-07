@@ -16,6 +16,10 @@ body{
     margin-left: 10%;
 }
 
+.font-1{
+    font-size: 1rem;
+}
+
 .top-25{
     top: 25%;
 }
@@ -31,8 +35,20 @@ body{
     margin-right: 8.33333%;
 }
 
+.vw-100{
+    width: 100vw;
+}
+
 .w-10ch{
     width: 10ch;
+}
+
+.w-8ch{
+    width: 8ch;
+}
+
+.w-15ch{
+    width: 15ch;
 }
 
 .w-60ch{
@@ -42,6 +58,7 @@ body{
 .h-100{
     min-height: 100%;
 }
+
 .z-1000{
     z-index: 1000;
 }
@@ -159,9 +176,27 @@ body{
     text-decoration: underline;
 }
 
+.mobile-logo{
+    filter: brightness(0%) invert(1);
+}
+
+
+.blur-mask{
+    filter: blur(30px);
+}
+
+.blur-icon{
+    width: 50px;
+    filter: brightness(0%) invert(1);
+    /* margin: 50px 0 0 50px; */
+}
+
 @media screen and (max-width: 992px) {
     .mr-8{
         margin-right: 0;
+    }
+    .py-10{
+        padding: 2rem 0;
     }
 }
 
