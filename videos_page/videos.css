@@ -60,21 +60,12 @@ body{
     font-size: 1.25rem;
 }
 
-.btn a:link {
+a:link, a:visited{
+    color: white;
     text-decoration: none;
-    color: black;
-}
-  
-.btn  a:visited {
-    text-decoration: none;
-    color: black;
-}
+} 
 
-.btn a:hover {
-    text-decoration: underline;
-}
-
-.btn a:active {
+a:hover, a:active{
     text-decoration: underline;
 }
 

@@ -5,10 +5,13 @@ const achievements_texts = document.querySelectorAll(".achievements-text");
 const line_blue = document.querySelector('.line-blue');
 const line_green = document.querySelector('.line-green');
 const line_yellow = document.querySelector('.line-yellow');
+const line_purple = document.querySelector('.line-purple');
 
 const blur_icons = document.querySelectorAll('.blur-icon');
 const read_more_btn = document.querySelector('.read-more');
 
+
+const operation_titles = document.querySelectorAll('.operation-title'); 
 
 document.addEventListener('scroll', () => {
     if (window.scrollY >= document.querySelector(".heading").offsetHeight) {
@@ -71,6 +74,13 @@ for(let [i, icon] of blur_icons.entries()){
   })
 }
 
+
+for(let title of operation_titles){
+  title.addEventListener("click", ()=>{
+    title.parentElement.children[1].classList.toggle("d-none");
+  })
+
+}
 
 
 const observerImg1 = new IntersectionObserver(entries => {
@@ -142,6 +152,7 @@ for(let text of achievements_texts){
 observerLine.observe(line_blue);
 observerLine.observe(line_green);
 observerLine.observe(line_yellow);
+observerLine.observe(line_purple);
 
 function setHeadingMT(){
   document.querySelector(".heading").style.marginTop = `-${document.querySelector("nav").offsetHeight}px`;

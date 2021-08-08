@@ -110,3 +110,13 @@ body{
 }
 
 
+
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+} 
+
+a:hover, a:active{
+    text-decoration: underline;
+}
