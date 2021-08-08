@@ -111,3 +111,22 @@ body{
     0% {margin-left: 0;}
     100% {margin-left: 50%; transform: translateX(-50%);}
 }
+
+
+.top-btn{
+	position:fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 80px;
+	right: 40px;
+	background-color:rgba(221, 201, 24, 1);
+	color:black;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.up-arrow{
+    font-size:36px;
+    transform: scale(.5, 1);
+}

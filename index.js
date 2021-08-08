@@ -7,6 +7,8 @@ const line_green = document.querySelector('.line-green');
 const line_yellow = document.querySelector('.line-yellow');
 
 const blur_icons = document.querySelectorAll('.blur-icon');
+const read_more_btn = document.querySelector('.read-more');
+
 
 document.addEventListener('scroll', () => {
     if (window.scrollY >= document.querySelector(".heading").offsetHeight) {
@@ -27,15 +29,35 @@ document.addEventListener('scroll', () => {
 
 // })
 
+
+read_more_btn.addEventListener("click", ()=>{
+  const dots = document.getElementById("dots");
+  const moreText = document.getElementById("more");
+
+  if (!dots.classList.contains("d-inline")) {
+    dots.classList.add("d-inline");
+    dots.classList.remove("d-none");
+    read_more_btn.innerHTML = "Read more";
+    moreText.classList.remove("d-inline");
+    moreText.classList.add("d-none");
+  } else {
+    dots.classList.remove("d-inline");
+    dots.classList.add("d-none");
+    read_more_btn.innerHTML = "Read less";
+    moreText.classList.add("d-inline");
+    moreText.classList.remove("d-none");
+  }
+})
+
 for(let [i, icon] of blur_icons.entries()){
-  console.log(icon)
+  // console.log(icon)
   icon.addEventListener("click", ()=>{
     const img = icon.parentElement.children[1]
     const current_icon = document.querySelectorAll('.blur-icon')[i];
     // console.log(current_icon)
     img.classList.toggle("blur-mask");
 
-    console.log(current_icon.children[0].src)
+    // console.log(current_icon.children[0].src)
     if(current_icon.children[0].src.includes("eye-closed.png")){
       // console.log("in if")
       const str = current_icon.children[0].src.replace("closed", "open");
@@ -123,5 +145,5 @@ observerLine.observe(line_yellow);
 
 function setHeadingMT(){
   document.querySelector(".heading").style.marginTop = `-${document.querySelector("nav").offsetHeight}px`;
-  console.log("Working and navbar: " + document.querySelector("nav").offsetHeight)
+  // console.log("Working and navbar: " + document.querySelector("nav").offsetHeight)
 }
