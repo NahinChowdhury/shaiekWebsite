@@ -16,10 +16,6 @@ body{
     margin-left: 10%;
 }
 
-.font-1{
-    font-size: 1rem;
-}
-
 .top-25{
     top: 25%;
 }
@@ -29,8 +25,9 @@ body{
 }
 
 .right-12{
-    right: 12.7%;
+    right: 12.6%;
 }
+
 .mr-8{
     margin-right: 8.33333%;
 }
@@ -99,6 +96,26 @@ body{
     font-weight: 600;
 }
 
+.italic-500{
+    font-weight: 500;
+    font-style: italic;
+}
+
+.italic-600{
+    font-weight: 600;
+    font-style: italic;
+}
+
+.italic-700{
+    font-weight: 700;
+    font-style: italic;
+}
+
+.italic-800{
+    font-weight: 800;
+    font-style: italic;
+}
+
 .bg-blue{
     background-color: rgba(24,142,221,1);
 }
@@ -163,21 +180,6 @@ body{
     color: rgb(148, 43, 174);
 }
 
-.italic-500{
-    font-weight: 500;
-    font-style: italic;
-}
-
-.italic-600{
-    font-weight: 600;
-    font-style: italic;
-}
-
-.italic-800{
-    font-weight: 800;
-    font-style: italic;
-}
-
 .line-green{
     margin: 0px auto;
     width: 75px;
@@ -235,9 +237,14 @@ a:link, a:visited{
     text-decoration: none;
 } 
 
-a:hover, a:active{
+a:hover, a:active{    
     text-decoration: underline;
 }
+
+.btn:hover{
+    color: white;
+}
+
 
 .mobile-logo{
     filter: brightness(0%) invert(1);
@@ -254,6 +261,10 @@ a:hover, a:active{
     /* margin: 50px 0 0 50px; */
 }
 
+.w-carousel{
+    width: 75%
+}
+
 @media screen and (max-width: 992px) {
     body{
         font-size: 1rem;
@@ -264,7 +275,16 @@ a:hover, a:active{
     .py-10{
         padding: 2rem 0;
     }
+    .w-carousel{
+        width: 90%
+    }
+    .right-12{
+        right: 5%;
+    }
 }
+
+
+
 
 .pointer{
     cursor: pointer;
@@ -320,3 +340,37 @@ a:hover, a:active{
     0% {margin-left: 0;}
     100% {margin-left: 50%; transform: translateX(-50%);}
 }
+
+
+
+
+/* Navbar Design */
+.nav-link:hover{
+    text-decoration: none;
+}
+
+.life-events-nav:hover, .life-events-nav:active{
+    color: rgb(0,102, 170)  !important;
+    font-weight: 700;
+}
+
+.operations-nav:hover, .operations-nav:active{
+    color: rgb(122, 0, 170)  !important;
+    font-weight: 700;
+}
+
+.videos-nav:hover, .videos-nav:active{
+    color: rgb(170, 167, 0)  !important;
+    font-weight: 700;
+}
+
+.contact-nav:hover, .contact-nav:active{
+    color: rgb(170, 77, 0)  !important;
+    font-weight: 700;
+}
+
+.photos-nav:hover, .photos-nav:active{
+    color: rgb(170, 0, 0)  !important;
+    font-weight: 700;
+}
+

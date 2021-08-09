@@ -40,6 +40,17 @@ body{
     background-color: rgb(221, 24, 24);
 }
 
+.line-animation{
+    animation-name: line-dash;
+    animation-duration: 3s;
+    transition: ease-in-out;
+
+}
+
+@keyframes line-dash {
+    0% {margin-left: 0;}
+    100% {margin-left: 50%; transform: translateX(-50%);}
+}
 
 /* Footer designs */
 .mobile-logo{
