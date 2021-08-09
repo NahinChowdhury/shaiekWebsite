@@ -126,7 +126,7 @@ function createDiv(videos){
                 </div>
                 <div class="col-md-8 mr-2 my-2">
                     <div class="card-body">
-                        <h5 class="card-title italic-700 font-2">${position+1}. ${title}</h5>
+                        <h5 class="card-title italic-700 fs-2">${position+1}. ${title}</h5>
                         <p class="card-text font-1">${description}</p>
                     </div>
                     <div class="d-flex justify-content-md-start">

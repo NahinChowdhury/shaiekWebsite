@@ -1,0 +1,33 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(221, 24, 24, 6%);
+}
+
+.text-red {
+    color: rgba(221, 24, 24);
+}
+
+
+.custom-carousel{
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.img-size-carousel{
+    min-width: 350px;
+    width: 400px;
+    max-width: 401px;
+    padding: 0 2rem;
+    border-right: 20px solid rgba(221, 24, 24);
+}
+
+.img-size{
+    min-width: 125px;
+    /* min-height: 125px; */
+}
+
+@media screen and (max-width: 766px) {
+    .img-size{
+        min-width: 185px;
+    }
+}
