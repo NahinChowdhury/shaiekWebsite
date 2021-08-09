@@ -16,7 +16,7 @@ body{
 .img-size-carousel{
     min-width: 350px;
     width: 400px;
-    max-width: 401px;
+    max-width: 400px;
     padding: 0 2rem;
     border-right: 20px solid rgba(221, 24, 24);
 }
@@ -30,4 +30,30 @@ body{
     .img-size{
         min-width: 185px;
     }
+}
+
+
+.line-red{
+    margin: 0px auto;
+    width: 75px;
+    height: 5px;
+    background-color: rgb(221, 24, 24);
+}
+
+
+/* Footer designs */
+.mobile-logo{
+    filter: brightness(0%) invert(1);
+}
+
+.w-8ch{
+    width: 8ch;
+}
+
+.w-10ch{
+    width: 10ch;
+}
+
+.w-15ch{
+    width: 15ch;
 }

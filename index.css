@@ -131,6 +131,10 @@ body{
     background-color: rgba(182, 24, 221, 6%);
 }
 
+.bg-light-red{
+    background-color: rgba(221, 24, 24, 6%);
+}
+
 .text-green{
     color: rgb(0 166 81);
 }
@@ -149,6 +153,10 @@ body{
 
 .text-purple{
     color: rgb(182, 24, 221);
+}
+
+.text-red{
+    color: rgb(221, 24, 24);
 }
 
 .text-dark-purple{
@@ -193,6 +201,30 @@ body{
     background-color: rgb(182, 24, 221);
 }
 
+.line-red{
+    margin: 0px auto;
+    width: 75px;
+    height: 5px;
+    background-color: rgb(221, 24, 24);
+}
+
+.vertical-line{
+    height: 150px;
+    border-left: 10px solid rgba(221, 24, 24, 50%);
+}
+
+.custom-carousel{
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.img-size-carousel{
+    min-width: 350px;
+    width: 400px;
+    max-width: 400px;
+    padding: 0 2rem;
+    /* border-right: 20px solid rgba(221, 24, 24); */
+}
 
 .mh-640{
     max-height: 640px;
