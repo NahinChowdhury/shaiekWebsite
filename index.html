@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaiek website</title>
+    <title>Dr. Shaiek Aziz Chowdhury</title>
     
     
 
@@ -15,47 +15,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-md navbar-dark px-md-5 px-0 position-fixed vw-100" id="mainNav">
+        <div class="container-fluid">
+            <a class="nav-link  home-nav mb-auto" href="" id="home">Home</a>
+            <div class="d-md-flex">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ml-auto" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link operations-nav" href="./operations.html">Operations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link life-events-nav" href="./life_events.html">Life Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link photos-nav" href="./photos.html">Photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link videos-nav" href="./videos.html">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link contact-nav" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
       
     <div class="container-fluid px-0 mx-0" > 
         <!-- style="background-color: red;" -->
-        <nav class="navbar navbar-expand-md navbar-dark px-md-5 px-0 position-fixed vw-100" id="mainNav">
-            <div class="container-fluid">
-                <a class="navbar-brand mb-auto" href="" id="home">Home</a>
-                <div class="d-md-flex">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse ml-auto" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link operations-nav" href="./operations_page/operations.html">Operations</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link life-events-nav" href="./achievements_page/achievements.html">Life Events</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link photos-nav" href="./photos_page/photos.html">Photos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link videos-nav" href="./videos_page/videos.html">Videos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link contact-nav" href="./contact/contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        
 
         <div class="heading row  px-0 mx-0">
             <div class="col-12">
                 <div class="row">
-                    <img src="./images//front-page-image-updated.jpg" alt="" class="px-0">
+                    <img src="./images/front-page-image-updated.jpg" alt="" class="px-0">
                 </div>
             </div>
         </div>
@@ -285,6 +286,10 @@
                 </div>
             </div>
 
+            <div>
+                <hr class="line-purple" style="height: 10px; width: 180px;">
+            </div>
+            
             <div class="d-flex flex-column text-center align-items-center my-2">
                 <div class="text-center operation-title bold-700 text-dark-purple pointer fs-3">
                     Open Surgeries
@@ -313,6 +318,9 @@
                     </div>
                     <div>
                         8. Hydrocele Surgery
+                    </div>
+                    <div>
+                        9. Thyroid surgery
                     </div>
                 </div>
             </div>
@@ -366,7 +374,7 @@
                 </div>
 
                 <div class="row d-flex justify-content-center">
-                    <a href="./achievements_page/achievements.html" class="btn bg-blue w-10ch">See More</a>
+                    <a href="./life-events.html" class="btn bg-blue w-10ch">See More</a>
                 </div>
 
             </div>
@@ -398,18 +406,12 @@
                     <div class="vertical-line"></div>
                     <img src="./images/urology-melbourne.jpg" alt="" class="img-fluid img-size-carousel">
                     <div class="vertical-line"></div>
-                    <img src="./images/caduceus-outline.png" alt="" class="img-fluid img-size-carousel">
-                    <div class="vertical-line"></div>
-                    <img src="./images/10k-surgery.JPG" alt="" class="img-fluid img-size-carousel">
-                    <div class="vertical-line"></div>
-                    <img src="./images/10k-surgery.JPG" alt="" class="img-fluid img-size-carousel">
-                    <div class="vertical-line"></div>
                     <img src="./images/10k-surgery.JPG" alt="" class="img-fluid img-size-carousel">
                 </div>
             </div>
 
             <div class="row d-flex justify-content-center mt-5">
-                <a href="./photos_page/photos.html" class="btn btn-danger w-10ch">See All</a>
+                <a href="./photos.html" class="btn btn-danger w-10ch">See All</a>
             </div>
             
         </div>
@@ -511,6 +513,6 @@
     
 
 
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

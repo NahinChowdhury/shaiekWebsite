@@ -1,0 +1,113 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    background-color: rgba(182, 24, 221, 6%);
+}
+
+.line-purple{
+    margin: 0px auto;
+    width: 75px;
+    height: 5px;
+    background-color: rgb(182, 24, 221);
+}
+
+
+.text-purple{
+    color: rgb(182, 24, 221);
+}
+
+.text-dark-purple{
+    color: rgb(148, 43, 174);
+}
+
+.bold-700{
+    font-weight: 700;
+}
+
+.line-animation{
+    animation-name: line-dash;
+    animation-duration: 3s;
+    transition: ease-in-out;
+
+}
+
+@keyframes line-dash {
+    0% {margin-left: 0;}
+    100% {margin-left: 50%; transform: translateX(-50%);}
+}
+
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+} 
+
+a:hover, a:active{
+    text-decoration: underline;
+}
+
+/* Footer css */
+.mobile-logo{
+    filter: brightness(0%) invert(1);
+}
+
+.w-8ch{
+    width: 8ch;
+}
+
+.w-10ch{
+    width: 10ch;
+}
+
+.w-15ch{
+    width: 15ch;
+}
+
+
+/* Navbar Design */
+.nav-link:hover{
+    text-decoration: none;
+}
+
+.home-nav:hover, .home-nav:active{
+    color: rgb(0, 170, 57)  !important;
+    font-weight: 700;
+}
+
+.life-events-nav:hover, .life-events-nav:active{
+    color: rgb(0,102, 170)  !important;
+    font-weight: 700;
+}
+
+.operations-nav:hover, .operations-nav:active{
+    color: rgb(122, 0, 170)  !important;
+    font-weight: 700;
+}
+
+.videos-nav:hover, .videos-nav:active{
+    color: rgb(170, 167, 0)  !important;
+    font-weight: 700;
+}
+
+.contact-nav:hover, .contact-nav:active{
+    color: rgb(170, 77, 0)  !important;
+    font-weight: 700;
+}
+
+.photos-nav:hover, .photos-nav:active{
+    color: rgb(170, 0, 0)  !important;
+    font-weight: 700;
+}
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+} 
+
+a:hover, a:active{    
+    text-decoration: underline;
+}
+
+.btn:hover{
+    color: white;
+}

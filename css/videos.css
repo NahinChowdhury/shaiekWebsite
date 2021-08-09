@@ -1,0 +1,172 @@
+/* .videos{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.videoBox{
+    border: 1px solid black; 
+    width: 90%; 
+    margin-bottom: 1rem;
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
+}
+
+.imgCenter{
+    display: flex;
+    justify-content: center;
+} */
+
+body{
+    min-height: 100vh;
+    height: auto;
+    /* background-image: linear-gradient(to right, #757F9A, #D7DDE8); */
+    background-color: rgba(221, 201, 24, 0.055);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.bg-color{
+    background-color: gainsboro;
+}
+
+.bg-light-yellow {
+    background-color: rgba(221, 201, 24, 0.055);
+}
+
+
+.line-yellow{
+    margin: 0px auto;
+    width: 75px;
+    background-color: rgba(221, 201, 24, 1);
+}
+
+.text-yellow{
+    color: rgba(221, 201, 24, 1);
+}
+
+.bold-800{
+    font-weight: 800;
+}
+
+.italic-700{
+    font-style: italic;
+    font-weight: 700;
+}
+
+.font-2{
+    font-size: 2rem;;
+}
+
+.font-1{
+    font-size: 1.25rem;
+}
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+} 
+
+a:hover, a:active{
+    text-decoration: underline;
+}
+
+
+.mobile-logo{
+    filter: brightness(0%) invert(1);
+}
+
+.font-1{
+    font-size: 1rem;
+}
+
+.w-10ch{
+    width: 10ch;
+}
+
+.w-8ch{
+    width: 8ch;
+}
+
+.w-15ch{
+    width: 15ch;
+}
+
+
+.line-animation{
+    animation-name: line-dash;
+    animation-duration: 3s;
+    transition: ease-in-out;
+
+}
+
+@keyframes line-dash {
+    0% {margin-left: 0;}
+    100% {margin-left: 50%; transform: translateX(-50%);}
+}
+
+
+.top-btn{
+	position:fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 80px;
+	right: 40px;
+	background-color:rgba(221, 201, 24, 1);
+	color:black;
+	border-radius: 50px;
+	text-align: center;
+	/* box-shadow: 2px 2px 3px #999; */
+}
+
+.up-arrow{
+    font-size:36px;
+    transform: scale(.5, 1);
+}
+
+
+/* Navbar Design */
+.nav-link:hover{
+    text-decoration: none;
+}
+
+.home-nav:hover, .home-nav:active{
+    color: rgb(0, 170, 57)  !important;
+    font-weight: 700;
+}
+
+.life-events-nav:hover, .life-events-nav:active{
+    color: rgb(0,102, 170)  !important;
+    font-weight: 700;
+}
+
+.operations-nav:hover, .operations-nav:active{
+    color: rgb(122, 0, 170)  !important;
+    font-weight: 700;
+}
+
+.videos-nav:hover, .videos-nav:active{
+    color: rgb(170, 167, 0)  !important;
+    font-weight: 700;
+}
+
+.contact-nav:hover, .contact-nav:active{
+    color: rgb(170, 77, 0)  !important;
+    font-weight: 700;
+}
+
+.photos-nav:hover, .photos-nav:active{
+    color: rgb(170, 0, 0)  !important;
+    font-weight: 700;
+}
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+} 
+
+a:hover, a:active{    
+    text-decoration: underline;
+}
+
+.btn:hover{
+    color: white;
+}
