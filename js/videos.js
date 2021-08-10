@@ -41,7 +41,7 @@ async function fetch_playlist_id(api_key){
 
 async function fetch_video_info(api_key, playlist_id, nextPageToken=null){
 
-    console.log("this one is in top of fetch video info: " + nextPageToken);
+    // console.log("this one is in top of fetch video info: " + nextPageToken);
     const maxResults = 8;
     let videos = [];
     if(nextPageToken){
@@ -58,7 +58,7 @@ async function fetch_video_info(api_key, playlist_id, nextPageToken=null){
                 const moreVidsButton = document.querySelector("#retrieveButton");
                 moreVidsButton.classList.add("disabled");
             }
-            console.log(result);
+            // console.log(result);
             // console.log(result.nextPageToken);
             
             // console.log(videos); //3

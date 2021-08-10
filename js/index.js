@@ -10,16 +10,30 @@ const line_purple = document.querySelector('.line-purple');
 const blur_icons = document.querySelectorAll('.blur-icon');
 const read_more_btn = document.querySelector('.read-more');
 
-
 const operation_titles = document.querySelectorAll('.operation-title'); 
 
+
+
 document.addEventListener('scroll', () => {
+  // if the fornt page doesnt load
+  if(document.querySelector(".heading").offsetHeight != 0){
     if (window.scrollY >= document.querySelector(".heading").offsetHeight) {
         navbar.classList.add("d-none")
     }
     else {
       navbar.classList.remove("d-none")
     }
+  }
+  else{
+    // then just consider the about section as our first section
+    if (window.scrollY >= (document.querySelector(".about-section").offsetHeight) ) {
+        navbar.classList.add("d-none")
+    }
+    else {
+      navbar.classList.remove("d-none")
+    }
+  }
+
 })
 
 // setHeadingMT();
