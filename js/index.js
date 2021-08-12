@@ -1,11 +1,12 @@
 const navbar = document.querySelector(".navbar");
 
 const images = document.querySelectorAll('.image');
-const achievements_texts = document.querySelectorAll(".achievements-text");
+const achievements_texts = document.querySelectorAll(".life-events-text");
 const line_blue = document.querySelector('.line-blue');
 const line_green = document.querySelector('.line-green');
 const line_yellow = document.querySelector('.line-yellow');
 const line_purple = document.querySelector('.line-purple');
+const line_red = document.querySelector('.line-red');
 
 const blur_icons = document.querySelectorAll('.blur-icon');
 const read_more_btn = document.querySelector('.read-more');
@@ -167,6 +168,7 @@ observerLine.observe(line_blue);
 observerLine.observe(line_green);
 observerLine.observe(line_yellow);
 observerLine.observe(line_purple);
+observerLine.observe(line_red);
 
 function setHeadingMT(){
   document.querySelector(".heading").style.marginTop = `-${document.querySelector("nav").offsetHeight}px`;

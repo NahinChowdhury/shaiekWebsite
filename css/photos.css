@@ -117,3 +117,38 @@ a:hover, a:active{
 .btn:hover{
     color: white;
 }
+
+
+/* Style for up arrow */
+
+.top-btn{
+	position:fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 80px;
+	right: 40px;
+	background-color:rgb(221, 24, 24);
+	color:black;
+	border-radius: 50px;
+	text-align: center;
+	/* box-shadow: 2px 2px 3px #999; */
+}
+
+
+.up-arrow{
+    font-size: 36px;
+    transform: scale(2, 2);
+}
+
+@media screen and (max-width: 766px) {
+    .top-btn{
+        width: 45px;
+        height: 45px;
+        right: 10px;
+    }
+
+    .up-arrow{
+        font-size: 50px;
+        transform: scale(1, 1);
+    }
+}

@@ -5,6 +5,8 @@ const top_btn = document.querySelector('.top-btn');
 top_btn.addEventListener("click", ()=>{
     window.scrollTo(0,0);
 })
+
+
 const observerLine = new IntersectionObserver(entries => {
     // Loop over the entries
     entries.forEach(entry => {
@@ -122,7 +124,7 @@ function createDiv(videos){
         <div class="card mb-5 mx-auto shadow bg-color" style="max-width: 80%;">
             <div class="row g-0">
                 <div class="col-md-4 d-flex align-items-center justify-content-center mt-md-0">
-                    <img src="${thumbnail}" alt="..." class="img-fluid img-thumbnail">
+                    <img src="${thumbnail}" alt="Youtube Video Thumbnail" class="img-fluid img-thumbnail">
                 </div>
                 <div class="col-md-8 mr-2 my-2">
                     <div class="card-body">
@@ -130,7 +132,7 @@ function createDiv(videos){
                         <p class="card-text font-1">${description}</p>
                     </div>
                     <div class="d-flex justify-content-md-start">
-                        <a href = "https://www.youtube.com/watch?v=${video_id}" class="btn btn-danger text-white mx-md-3 mx-auto ">Watch on YouTube</a>
+                        <a href = "https://www.youtube.com/watch?v=${video_id}" class="btn btn-danger text-white mx-md-3 mx-auto" target="_blank">Watch on YouTube</a>
                     </div>
                 </div>
             </div>
