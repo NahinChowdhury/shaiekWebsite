@@ -9,6 +9,7 @@
   "author": "Nahin Chowdhury",
   "license": "ISC",
   "dependencies": {
-    "fb": "^2.0.0"
+    "fb": "^2.0.0",
+    "node-fetch": "^2.6.1"
   }
 }

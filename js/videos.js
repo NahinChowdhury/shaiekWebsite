@@ -27,7 +27,6 @@ async function fetch_playlist_id(api_key){
     let id = 0;
     // console.log("before fetch")
 
-    const pewdiepie = "UCVtFOytbRpEvzLjvqGG5gxQ";
     const shaiekID = "UCwNXRGwoxROY0OaC9uX_7uw";
     await fetch("https://www.googleapis.com/youtube/v3/channels?id="+shaiekID+"&key="+api_key+"&part=contentDetails")
     .then((response) => response.json()) //2
