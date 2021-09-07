@@ -90,6 +90,11 @@ a:hover, a:active{
     width: 15ch;
 }
 
+@media screen and (max-width: 1100px) {
+    .nav-link{
+        font-size: 1rem;
+    }
+}
 
 .line-animation{
     animation-name: line-dash;
@@ -140,6 +145,11 @@ a:hover, a:active{
     font-weight: 700;
 }
 
+.interns-nav:hover, .interns-nav:active{
+    color: rgba(221, 201, 24, 1)  !important;
+    font-weight: 700;
+}
+
 a:link, a:visited{
     color: white;
     text-decoration: none;
@@ -168,6 +178,9 @@ a:hover, a:active{
 	/* box-shadow: 2px 2px 3px #999; */
 }
 
+.top-btn:hover{
+    text-decoration: none;
+}
 
 .up-arrow{
     font-size:36px;

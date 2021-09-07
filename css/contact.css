@@ -91,13 +91,13 @@ body{
     margin-left: -18rem;
     margin-top: 4rem;
     filter: contrast(0%);
+    opacity: 58%;
 }
 
 
 .map-hw{
     height: 300px;
 }
-
 
 
 .youtube-logo a:active, .facebook-logo a:active, .popular-link a:active {
@@ -165,6 +165,12 @@ body{
     font-size: 1rem;
 }
 
+@media screen and (max-width: 1100px) {
+    .nav-link{
+        font-size: 1rem;
+    }
+}
+
 
 @media screen and (max-width: 992px) {
     .pl-6{
@@ -225,6 +231,11 @@ body{
 
 .photos-nav:hover, .photos-nav:active{
     color: rgb(170, 0, 0)  !important;
+    font-weight: 700;
+}
+
+.interns-nav:hover, .interns-nav:active{
+    color: rgba(221, 201, 24, 1)  !important;
     font-weight: 700;
 }
 

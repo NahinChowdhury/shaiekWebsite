@@ -5,6 +5,7 @@ const achievements_texts = document.querySelectorAll(".life-events-text");
 const line_blue = document.querySelector('.line-blue');
 const line_green = document.querySelector('.line-green');
 const line_yellow = document.querySelector('.line-yellow');
+const line_yellow_ochre = document.querySelector('.line-yellow-ochre');
 const line_purple = document.querySelector('.line-purple');
 const line_red = document.querySelector('.line-red');
 
@@ -167,6 +168,7 @@ for(let text of achievements_texts){
 observerLine.observe(line_blue);
 observerLine.observe(line_green);
 observerLine.observe(line_yellow);
+observerLine.observe(line_yellow_ochre);
 observerLine.observe(line_purple);
 observerLine.observe(line_red);
 
