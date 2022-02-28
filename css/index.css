@@ -200,6 +200,10 @@ body{
     color: rgb(218, 171, 28);
 }
 
+.bullet-point-color{
+    color: rebeccapurple;
+}
+
 .line-green{
     margin: 0px auto;
     width: 75px;

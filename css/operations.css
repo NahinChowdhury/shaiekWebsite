@@ -20,6 +20,10 @@ body{
     color: rgb(148, 43, 174);
 }
 
+.bullet-point-color{
+    color: rebeccapurple;
+}
+
 .bold-700{
     font-weight: 700;
 }
