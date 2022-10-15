@@ -25,29 +25,22 @@ observerLine.observe(line_yellow);
 async function fetch_playlist_id(api_key){
 
     let id = 0;
-    // console.log("before fetch")
 
     const shaiekID = "UCwNXRGwoxROY0OaC9uX_7uw";
     await fetch("https://www.googleapis.com/youtube/v3/channels?id="+shaiekID+"&key="+api_key+"&part=contentDetails")
-    .then((response) => response.json()) //2
+    .then((response) => response.json())
     .then((result) => {
         id = result.items[0].contentDetails.relatedPlaylists.uploads
-        // console.log(id); //3
     });
-
-    // console.log("after fetch")
 
     return id;
 }
 
 async function fetch_video_info(api_key, playlist_id, nextPageToken=null){
 
-    // console.log("this one is in top of fetch video info: " + nextPageToken);
     const maxResults = 8;
     let videos = [];
     if(nextPageToken){
-
-        // console.log("token is not null: " + nextPageToken);
 
         await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlist_id}&key=${api_key}&part=snippet&pageToken=${nextPageToken}&maxResults=${maxResults}`)
         .then((response) => response.json()) //2
@@ -59,14 +52,9 @@ async function fetch_video_info(api_key, playlist_id, nextPageToken=null){
                 const moreVidsButton = document.querySelector("#retrieveButton");
                 moreVidsButton.classList.add("disabled");
             }
-            // console.log(result);
-            // console.log(result.nextPageToken);
-            
-            // console.log(videos); //3
         });
     }
     else if(nextPageToken === 0){
-        // alert("No more videos available");
         // do nothing as there's no more videos to load
 
         // disable button
@@ -74,15 +62,11 @@ async function fetch_video_info(api_key, playlist_id, nextPageToken=null){
         moreVidsButton.classList.add("disabled");
     }
     else{
-
-        // console.log("token is null: " + nextPageToken);
-
         await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlist_id}&key=${api_key}&part=snippet&maxResults=${maxResults}`)
-        .then((response) => response.json()) //2
+        .then((response) => response.json())
         .then((result) => {
             videos = result.items;
             nextPageToken = result.nextPageToken;
-            // console.log(videos); //3
         });
 
     }
@@ -101,23 +85,10 @@ function createDiv(videos){
         const position = video.snippet.position;
         const title = video.snippet.title;
         const thumbnail = video.snippet.thumbnails.medium.url;
-        const thumbnail_w = video.snippet.thumbnails.default.width;
-        const thumbnail_h = video.snippet.thumbnails.default.height;
         const description = video.snippet.description;
 
         const div = document.createElement("div");
         div.classList.add("videoBox");
-        // div.innerHTML = `<a href = "https://www.youtube.com/watch?v=${video_id}">
-        //                     <div>
-        //                         <div class="imgCenter">
-        //                             <img src="${thumbnail}">
-        //                         </div>
-        //                         <h3>${position+1}. ${title}</h3>
-        //                         <p>${description}</p>
-        //                     </div>
-        //                 </a>`;
-
-
 
         div.innerHTML = `
         <div class="card mb-5 mx-auto shadow bg-color" style="max-width: 80%;">
@@ -138,7 +109,6 @@ function createDiv(videos){
         </div>
         `;
         videosDiv.appendChild(div);
-        // body.appendChild(div);
     }
 }
 
@@ -152,9 +122,6 @@ async function init(){
     let nextPageToken1 = 0;
     let { videos, nextPageToken} = await fetch_video_info(api_key, playlist_id);
     nextPageToken1 = nextPageToken;
-    // console.log(nextPageToken);
-    // console.log("before create");
-    // console.log(videos);
     createDiv(videos);
 
     moreVidsButton.addEventListener("click",async ()=>{
@@ -162,7 +129,6 @@ async function init(){
         if(!moreVidsButton.classList.contains("disabled")){
             let { videos, nextPageToken} = await fetch_video_info(api_key, playlist_id, nextPageToken1);
             nextPageToken1 = nextPageToken;
-            // console.log(nextPageToken1);
             createDiv(videos);
         }
 
