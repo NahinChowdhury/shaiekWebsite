@@ -5,7 +5,6 @@ const navbar = document.querySelector(".navbar");
   const toggler = document.getElementById('drawerToggler');
   const drawer = document.getElementById('mobileDrawer');
   const overlay = document.getElementById('drawerOverlay');
-  const focusableSelectors = 'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
   let lastFocusedElement = null;
 
   function openDrawer() {
