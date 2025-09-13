@@ -423,3 +423,12 @@ a:hover, a:active{
     color: rgba(221, 201, 24, 1)  !important;
     font-weight: 700;
 }
+
+@media (min-width: 992px) {
+  .heading img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    display: block;
+  }
+}
