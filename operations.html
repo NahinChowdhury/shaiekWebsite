@@ -20,37 +20,55 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-md navbar-light px-sm-5 px-0 fs-4" id="mainNav">
+    <!-- Desktop Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark px-md-5 px-0 vw-100 desktop-nav fs-4" id="mainNav" aria-label="Main navigation">
         <div class="container-fluid">
             <a class="nav-link home-nav text-dark mb-auto" href="./index.html" id="home">Home</a>
-            <div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse ml-auto" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link operations-nav" href="">Operations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link life-events-nav" href="./life_events.html">Life Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link photos-nav" href="./photos.html">Photos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link interns-nav text-end" href="./jrrmc_interns.html">JRRMC Interns</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link videos-nav" href="./videos.html">Videos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link contact-nav" href="./contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse ml-auto show" id="navbarText" style="display: flex !important;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark operations-nav" href="./operations.html">Operations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark life-events-nav" href="./life_events.html">Life Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark photos-nav" href="./photos.html">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark interns-nav text-end" href="./jrrmc_interns.html">JRRMC Interns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark videos-nav" href="./videos.html">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark contact-nav" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>
+    <!-- Mobile Navigation -->
+    <nav class="navbar-light mobile-nav vw-100 mt-2" aria-label="Mobile navigation">
+        <div class="container-fluid">
+            <a class="mr-auto text-dark" href="./index.html" id="home">Home</a>
 
+            <button class="navbar-toggler" type="button" id="drawerToggler" aria-controls="mobileDrawer" aria-expanded="false" aria-label="Open mobile menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="drawerOverlay" class="drawer-overlay" tabindex="-1" aria-hidden="true"></div>
+            <aside id="mobileDrawer" class="mobile-drawer" tabindex="-1" aria-modal="true" aria-label="Mobile menu" role="dialog">
+                <nav>
+                    <ul class="drawer-nav-list">
+                        <li><a class="nav-link operations-nav px-3" href="./operations.html">Operations</a></li>
+                        <li><a class="nav-link life-events-nav px-3" href="./life_events.html">Life Events</a></li>
+                        <li><a class="nav-link photos-nav px-3" href="./photos.html">Photos</a></li>
+                        <li><a class="nav-link interns-nav px-3" href="./jrrmc_interns.html">JRRMC Interns</a></li>
+                        <li><a class="nav-link videos-nav px-3" href="./videos.html">Videos</a></li>
+                        <li><a class="nav-link contact-nav px-3" href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </aside>
         </div>
     </nav>
 
