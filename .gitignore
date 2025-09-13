@@ -42,3 +42,6 @@ Thumbs.db
 /drshaiekazizchy.com-PrivateKey.pem
 /drshaiekazizchy.com-CSR.pem
 /certificates/
+
+# Zip Files
+*.zip
