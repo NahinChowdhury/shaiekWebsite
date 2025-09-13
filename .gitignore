@@ -38,6 +38,7 @@ Thumbs.db
 # VS Code settings
 .vscode/
 
+
 # Private keys
 /drshaiekazizchy.com-PrivateKey.pem
 /drshaiekazizchy.com-CSR.pem
