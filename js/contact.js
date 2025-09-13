@@ -37,7 +37,7 @@ async function initMap() {
     });
 
     const jalalabadIcon = {
-        url: "http://facilityregistry.dghs.gov.bd/img/bangladesh_govt_logo.png",
+        url: "../images/jalalabadLogo.png", // url
         scaledSize: new google.maps.Size(40,40), // scaled size
     }
 
