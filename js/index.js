@@ -231,3 +231,73 @@ function setHeadingMT(){
   document.querySelector(".heading").style.marginTop = `-${document.querySelector("nav").offsetHeight}px`;
   // console.log("Working and navbar: " + document.querySelector("nav").offsetHeight)
 }
+
+/* Image modal logic for index page (photos-section and interns-section)
+   Uses the page-local modal HTML added to [`index.html`](index.html:684). */
+(function () {
+  const imageModal = document.getElementById('imageModal');
+  const imageModalImg = document.getElementById('imageModalImg');
+  const imageModalClose = imageModal ? imageModal.querySelector('.image-modal-close') : null;
+  if (!imageModal || !imageModalImg || !imageModalClose) return;
+
+  let lastFocusedElement = null;
+
+  function handleEsc(e) {
+    if (e.key === 'Escape') closeImageModal();
+  }
+
+  function openImageModal(src, alt) {
+    imageModalImg.src = src;
+    imageModalImg.alt = alt || '';
+    imageModal.classList.add('open');
+    imageModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    document.addEventListener('keydown', handleEsc);
+    // focus for accessibility
+    imageModalClose.focus();
+  }
+
+  function closeImageModal() {
+    imageModal.classList.remove('open');
+    imageModal.setAttribute('aria-hidden', 'true');
+    imageModalImg.src = '';
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown', handleEsc);
+    // return focus to previously focused element if possible
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
+
+  // Target images in photos-section and interns-section on the index page
+  const photoImages = document.querySelectorAll('.photos-section img, .interns-section img, .img-size-carousel, .intern-photo img');
+  photoImages.forEach(img => {
+    img.setAttribute('tabindex', '0');
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      lastFocusedElement = img;
+      openImageModal(img.src, img.alt);
+    });
+    img.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        lastFocusedElement = img;
+        openImageModal(img.src, img.alt);
+      }
+    });
+  });
+
+  // Close handlers (close button, esc handled above)
+  imageModalClose.addEventListener('click', closeImageModal);
+  imageModal.addEventListener('click', (e) => {
+    // Ignore clicks on the image itself or the close button
+    if (
+      e.target === imageModalImg ||
+      imageModalImg.contains(e.target) ||
+      e.target === imageModalClose ||
+      imageModalClose.contains(e.target)
+    ) {
+      return;
+    }
+    // Any other click inside the modal (overlay or whitespace around the image) closes it
+    closeImageModal();
+  });
+})();

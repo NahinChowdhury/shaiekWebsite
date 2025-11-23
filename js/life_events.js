@@ -67,3 +67,68 @@ const observerLine = new IntersectionObserver(entries => {
 });
 
 observerLine.observe(line_blue);
+
+// --- Image modal logic for life_events page ---
+(function () {
+  const imageModal = document.getElementById('imageModal');
+  const imageModalImg = imageModal ? imageModal.querySelector('#imageModalImg') : null;
+  const imageModalClose = imageModal ? imageModal.querySelector('.image-modal-close') : null;
+  if (!imageModal || !imageModalImg || !imageModalClose) return;
+
+  let lastFocusedElement = null;
+
+  function handleEsc(e) {
+    if (e.key === 'Escape') closeImageModal();
+  }
+
+  function openImageModal(src, alt) {
+    imageModalImg.src = src;
+    imageModalImg.alt = alt || '';
+    imageModal.classList.add('open');
+    imageModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    document.addEventListener('keydown', handleEsc);
+    imageModalClose.focus();
+  }
+
+  function closeImageModal() {
+    imageModal.classList.remove('open');
+    imageModal.setAttribute('aria-hidden', 'true');
+    imageModalImg.src = '';
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown', handleEsc);
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
+
+  // target images on this page
+  const pageImages = document.querySelectorAll('.image img, .img-size');
+  pageImages.forEach(img => {
+    img.setAttribute('tabindex', '0');
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      lastFocusedElement = img;
+      openImageModal(img.src, img.alt);
+    });
+    img.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        lastFocusedElement = img;
+        openImageModal(img.src, img.alt);
+      }
+    });
+  });
+
+  // Close handlers: button, overlay click (outside image)
+  imageModalClose.addEventListener('click', closeImageModal);
+  imageModal.addEventListener('click', (e) => {
+    if (
+      e.target === imageModalImg ||
+      imageModalImg.contains(e.target) ||
+      e.target === imageModalClose ||
+      imageModalClose.contains(e.target)
+    ) {
+      return;
+    }
+    closeImageModal();
+  });
+})();

@@ -73,5 +73,72 @@ const observerLine = new IntersectionObserver(entries => {
       }
     });
 });
-
+ 
 observerLine.observe(line_yellow_ochre);
+
+// --- Image modal logic for interns page ---
+(function () {
+  const imageModal = document.getElementById('imageModal');
+  const imageModalImg = imageModal ? imageModal.querySelector('#imageModalImg') : null;
+  const imageModalClose = imageModal ? imageModal.querySelector('.image-modal-close') : null;
+  if (!imageModal || !imageModalImg || !imageModalClose) return;
+
+  let lastFocusedElement = null;
+
+  function handleEsc(e) {
+    if (e.key === 'Escape') closeImageModal();
+  }
+
+  function openImageModal(src, alt) {
+    imageModalImg.src = src;
+    imageModalImg.alt = alt || '';
+    imageModal.classList.add('open');
+    imageModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    document.addEventListener('keydown', handleEsc);
+    imageModalClose.focus();
+  }
+
+  function closeImageModal() {
+    imageModal.classList.remove('open');
+    imageModal.setAttribute('aria-hidden', 'true');
+    imageModalImg.src = '';
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown', handleEsc);
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
+
+  // Target images on interns page
+  const pageImages = document.querySelectorAll('.intern-photo img, .intern-photo-col img, .intern-photo-list img');
+  pageImages.forEach(img => {
+    img.setAttribute('tabindex', '0');
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      lastFocusedElement = img;
+      openImageModal(img.src, img.alt);
+    });
+    img.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        lastFocusedElement = img;
+        openImageModal(img.src, img.alt);
+      }
+    });
+  });
+
+  // Close handlers
+  imageModalClose.addEventListener('click', closeImageModal);
+  imageModal.addEventListener('click', (e) => {
+    // Ignore clicks on the image itself or the close button
+    if (
+      e.target === imageModalImg ||
+      imageModalImg.contains(e.target) ||
+      e.target === imageModalClose ||
+      imageModalClose.contains(e.target)
+    ) {
+      return;
+    }
+    // Any other click inside the modal (overlay or whitespace around the image) closes it
+    closeImageModal();
+  });
+})();
